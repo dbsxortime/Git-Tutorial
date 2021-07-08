@@ -16,4 +16,4 @@
 	<a href="/shoppingmall/homepage">move back to homepage</a> <br/>
 	<a href="/login/customLogout">logout</a> <br/>
 </body>
-</html>
+</html> 
