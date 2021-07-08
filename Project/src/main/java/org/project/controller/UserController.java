@@ -23,7 +23,7 @@ import lombok.extern.log4j.Log4j;
 @Controller
 @AllArgsConstructor
 @RequestMapping("/login/*")
-public class CommonController {
+public class UserController {
    @Setter(onMethod_ = @Autowired)
    private PasswordEncoder pwEncoder;
    
@@ -42,11 +42,11 @@ public class CommonController {
       log.info("logout : " + logout);
       
       if(error != null) {
-         model.addAttribute("error", "ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.");
+         model.addAttribute("error", "?‹¤?‹œ ?‹œ?„?•´ì£¼ì„¸?š”.");
       }
       
       if(logout != null) {
-         model.addAttribute("logout", "ë¡œê·¸ì•„ì›ƒì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+         model.addAttribute("logout", "ë¡œê·¸?•„?›ƒ?´ ?™„ë£? ?˜?—ˆ?Šµ?‹ˆ?‹¤.");
       }
       
    }
@@ -173,7 +173,7 @@ public class CommonController {
 		return "login/customLogin";
 	}
 	
-   // ë¹„ë°€ë²ˆí˜¸ ë°”ê¾¸ê¸°í•  ê²½ìš° ì„±ê³µ í˜ì´ì§€ ì´ë™
+   // ë¹„ë?ë²ˆí˜¸ ë°”ê¾¸ê¸°í•  ê²½ìš° ?„±ê³? ?˜?´ì§? ?´?™
 	/*
 	 * @RequestMapping(value="check_password_view") public String
 	 * checkPasswordForModify(HttpSession session, Model model) { UserVO loginUser =
