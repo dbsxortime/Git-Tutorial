@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.UserMapper">
+   <resultMap type="org.project.vo.UserVO" id="memberMap">
+      <result property="u_name" column="u_name"/>
+      <result property="u_id" column="u_id"/>
+      <result property="u_pw" column="u_pw"/>
+      <result property="u_pid" column="u_pid"/>
+      <result property="u_addr" column="u_addr"/>
+      <result property="u_email" column="u_email"/>
+      <result property="u_regdate" column="u_regdate"/>
+      <collection property="authList" resultMap="authMap"/>
+   </resultMap>
+   
+   <resultMap type="org.project.vo.AuthVO" id="authMap">
+      <result property="u_id" column="u_id"/>
+      <result property="auth" column="auth"/>
+   </resultMap>
+
+   <select id="read" resultMap="memberMap">
+      SELECT 
+          mem.U_NAME,U_PW,u_pid, U_ADDR,U_EMAIL,REG_DATE, U_PHONE, au.U_ID, AU.AUTH
+      FROM 
+          tbl_user mem 
+      LEFT JOIN 
+          tbl_auth au on mem.U_ID = au.U_ID
+      WHERE au.u_id=#{u_id}
+   </select>
+   
+   <!-- ############################################################## -->
+   <select id="readUserForOrder" resultType="org.project.vo.UserVO">
+      SELECT U_NAME, U_ID, U_ADDR, U_EMAIL, U_PHONE, save
+      FROM tbl_user
+      WHERE u_id=#{u_id}
+   </select>
+   <select id="readUserForUpdate" resultType="org.project.vo.UserVO">
+      SELECT U_NAME, U_ID, U_PW, U_PID, U_ADDR, U_PHONE, U_EMAIL
+      FROM tbl_user
+      WHERE u_id=#{u_id}
+   </select>
+   <update id="MyPageUpdateUser">
+      update tbl_user set
+         U_NAME = #{u_name},
+         U_ID = #{u_id},
+         U_PW = #{u_pw},
+         U_PID = #{u_pid},
+         U_ADDR = #{u_addr},
+         U_PHONE = #{u_phone},
+         U_EMAIL = #{u_email}
+      where u_id=#{u_id}
+   </update>
+   <update id="MyPageUpdateUserNoPw">
+      update tbl_user set
+         U_NAME = #{u_name},
+         U_ID = #{u_id},
+         U_PID = #{u_pid},
+         U_ADDR = #{u_addr},
+         U_PHONE = #{u_phone},
+         U_EMAIL = #{u_email}
+      where u_id=#{u_id}
+   </update>
+   <!-- ############################################################## -->
+   <delete id="deleteUser">
+      delete from tbl_user
+      where u_id=#{u_id}
+   </delete>
+   <delete id="deleteCartWithId">
+      delete from tbl_cart
+      where u_id=#{u_id}
+   </delete>
+   <delete id="deleteOrderWithId">
+      delete from tbl_order
+      where u_id=#{u_id}
+   </delete>
+   <delete id="deleteCouponUserWithId">
+      delete from tbl_coupon_user
+      where u_id=#{u_id}
+   </delete>
+   <delete id="deleteQandAWithId">
+      delete from TBL_QA
+      where u_id=#{u_id}
+   </delete>
+   <delete id="deleteAuthWithId">
+      delete from TBL_auth
+      where u_id=#{u_id}
+   </delete>
+   <!-- ############################################################## -->
+   <insert id="regUser">
+      insert into tbl_user(u_id, u_pw, u_name, u_pid, u_addr, u_email,u_phone)
+      values (#{u_id},#{u_pw},#{u_name},#{u_pid},#{u_addr},#{u_email},#{u_phone})
+   </insert>
+   
+   <insert id="regAuth">
+      insert into tbl_auth(u_id, auth)
+      values (#{u_id}, #{auth})
+   </insert>
+   <!-- #################### reg check ############################# -->
+   <select id="checkU_Id" resultType="int">
+      select count(u_id) as u_id from tbl_user
+      where u_id=#{u_id}
+   </select>
+   
+  
+   
+   
+   <select id="checkU_pid" resultType="int">
+      select count(u_pid) as u_pid from tbl_user
+      where u_pid=#{u_pid}
+   </select>
+   
+   <select id="checkU_phone" resultType="int">
+      select count(u_phone) as u_phone from tbl_user
+      where u_phone=#{u_phone}
+   </select>
+   
+   <select id="checkU_email" resultType="int">
+      select count(u_email) as u_email from tbl_user
+      where u_email=#{u_email}
+   </select>
+   <!-- ############################################################## -->
+   <update id="updateUsedSave">
+      update tbl_user
+      SET   save=save-#{saved}
+      where u_id=#{u_id}
+   </update>
+   
+   <select id="findId" resultType="org.project.vo.UserVO">
+   	select * from tbl_user where u_name=#{u_name} and u_phone=#{u_phone}
+   </select>
+   
+   <select id="findPw" resultType="org.project.vo.UserVO">
+  		 select * from tbl_user where u_id=#{u_id} and u_name=#{u_name} and u_phone=#{u_phone}
+   </select>
+   
+   <update id="updatePw">
+   		update tbl_user set 
+   			u_pw = #{updatePw }
+   		where 
+   			u_id = #{u_id }
+   </update>
+   
+   
+   
+   
+</mapper>

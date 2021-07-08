@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.OrderMapper"> 
+	
+	<insert id="insertOrder">
+		insert into tbl_order
+			(o_num, u_id, o_name, o_email, o_phone, d_phone, 
+			d_name, d_addr, o_msg, o_pay, 
+			delievery_fee, final_price, o_option, o_date, discount)
+		values
+			(o_num_seq.nextval,#{u_id}, #{o_name},#{o_email},#{o_phone},#{d_phone},
+			#{d_name}, #{d_addr}, #{o_msg}, #{o_pay},
+			 #{delievery_fee}, #{final_price}, #{o_option}, sysdate, #{discount})
+	</insert>
+	
+	<insert id="oNumToCart">
+		update tbl_cart 
+		set ispay = #{o_num}
+		where u_id=#{u_id} and ispay=0 and c_num=#{inputNum }
+	</insert>
+	
+	<update id="updateSave">
+		update tbl_user
+		SET	save=save+#{total_save}-#{saved}
+		where u_id=#{u_id}
+	</update>
+	
+	<select id="getONum" resultType="int">
+		select max(o_num) as o_num
+		from tbl_order
+	</select>
+	
+	<select id="getLastestCart" resultType="org.project.vo.CartVO">
+		select crt.c_num, crt.p_num, crt.u_id, crt.c_quantity, crt.c_size, crt.discount, crt.total_price, crt.ispay, crt.save, pd.p_name, pd.p_price, pd.p_content, pd.p_image, pd.p_ctg1, pd.p_ctg2
+		from tbl_cart crt
+		join tbl_product pd
+		on crt.p_num =pd.p_num
+		where 
+		    u_id=#{u_id} and
+		    ispay = (select max(ispay) from tbl_cart)
+	</select>
+	
+	<select id="getLastestOrder" resultType="org.project.vo.OrderVO">
+		select * from tbl_order
+		where 
+			u_id=#{u_id} and
+			o_num=(select max(o_num) as o_num from tbl_order)
+	</select>
+	
+	<update id="updateQuantity">
+		update tbl_option
+		SET	op_quantity=op_quantity-#{op_quantity }
+		where 
+			p_num=#{p_num } and
+			op_size=#{op_size }
+	</update>
+	
+	
+</mapper>

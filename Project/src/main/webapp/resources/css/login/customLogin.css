@@ -1,0 +1,23 @@
+ .wrap-div{
+    margin: auto;
+   
+    width: 600px;
+    height: 430px;
+}
+
+.infoall{
+	width : 1250px;
+}
+
+.logininfo{
+	width:250px;
+    margin-left: 20px;
+}
+
+ .registerfindinfo{
+    width : 300px;
+	margin-top: -20%;
+	 margin-left: 25%;
+	position : relative;
+	
+} 

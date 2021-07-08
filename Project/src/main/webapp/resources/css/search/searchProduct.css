@@ -1,0 +1,66 @@
+
+.search-detail{
+	width : 1250px;
+	margin-left: 10%;
+}
+
+
+.searchtable td{
+	font-size: 15px; 
+	
+}
+
+#searchbutt{
+	background-color: black;
+	color : white;
+	width : 80px;
+	margin-left: 15px;
+}
+
+.s-title{
+font-size: 13px;
+font-weight: 700;
+color: #000;
+line-height: 2;
+}
+
+.s-con{
+font-size: 11px; 
+font-weight: 400; 
+color: #aeaeae; 
+line-height: 1.5;
+margin: 5px 0 0;
+}
+
+.s-price{
+font-size: 14px; 
+font-weight: 700; 
+color: #000;
+padding: 15px 0 0 0;
+}
+
+.s-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 8%;
+	position: relative;
+	text-align: center;
+	
+}
+
+.s_imgT a{
+	text-decoration: none;
+}
+
+.s_imgT img {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+}
+
+
+.s_imgT, span {
+	text-align: center;
+}
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.QandAMapper">
+
+	<select id="getQandA" resultType="org.project.vo.QandAVO">
+		<![CDATA[
+			select * from tbl_qa where q_bno > 0
+		]]>
+	</select>
+	
+	<select id="getQandAList" resultType="org.project.vo.QandAVO">
+		select * from tbl_qa
+		order by q_bno desc
+	</select>
+	
+	<insert id="insertQandA">
+		insert into tbl_qa
+			(q_bno, u_id, q_title, q_content, issecret, q_regdate)
+		values
+			(q_bno_seq.nextval, #{u_id}, #{q_title}, #{q_content}, #{issecret}, sysdate)
+	</insert>
+	
+	<select id="readQandA" resultType="org.project.vo.QandAVO">
+		select * from tbl_qa where q_bno=#{q_bno}
+	</select>
+	
+	<delete id="deleteQandA">
+		delete from tbl_qa
+		where q_bno=#{q_bno}
+	</delete>
+	
+	<update id="updateQandA">
+		update tbl_qa set
+			q_title = #{q_title},
+			q_content = #{q_content},
+			u_id = #{u_id}
+		where q_bno = #{q_bno}
+	</update>
+	
+	<select id="getQandAListWithID" resultType="org.project.vo.QandAVO">
+		select * from tbl_qa
+		where u_id=#{u_id }
+		order by q_bno desc
+	</select>
+	
+	<update id="answer">
+		update tbl_qa set
+			answer=#{answer }
+		where q_bno = #{q_bno}
+	</update>
+	
+</mapper>

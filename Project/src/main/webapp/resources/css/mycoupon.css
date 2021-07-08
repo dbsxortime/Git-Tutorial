@@ -1,0 +1,34 @@
+.coupon_all{
+width : 90%;
+margin-bottom: 5%;
+text-align: center;
+font-family: "맑은 고딕";
+margin: auto;
+}
+
+
+.plusmsg{
+    text-align:center;
+     line-height: 50px;
+      margin: 0 40px;
+      font-size: 15px;	
+}
+
+.plusmsg p{
+	color: #000; font-size: 16px; margin-bottom: 10px;
+}
+
+.plusmsg a{
+	text-decoration: underline;
+}
+
+.table{
+	width : 70%;
+	margin-left: 15%;
+	margin-bottom : 5%;
+	font-size: 12px;
+}
+
+a:hover{
+	color : black;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.CouponMapper"> 
+	<select id="checkKeys" resultType="org.project.vo.CouponVO">
+		select cp_num,cp_expire from tbl_coupon
+		where cp_key = #{cp_key}
+	</select>
+	
+	<insert id="insertCoupon">
+	<![CDATA[
+		insert into tbl_coupon_user
+			(cpu_num, u_id, cp_num, cpu_expire)
+		values
+			(cpu_num_seq.nextval,#{u_id}, #{cp_num}, sysdate+#{cp_expire })
+	]]>
+	</insert>
+	
+	<select id="checkCoupon" resultType="org.project.vo.CouponVO">
+		select cpu.cpu_num,cpu.u_id, cpu.isused, cp.cp_num, cp.cp_possible, cp_discount, cp_expire
+		from tbl_coupon_user cpu
+		left join tbl_coupon cp on cp.cp_num = cpu.cp_num
+		where cpu.u_id=#{u_id } and cpu.isused=0 and cpu.cpu_num=#{cpu_num }
+	</select>
+	
+	<update id="updateUsedCoupon">
+		update tbl_coupon_user
+		set	isused=#{isused }
+		where 
+			cpu_num=#{cpu_num } and
+			u_id=#{u_id }
+	</update>
+	
+</mapper>

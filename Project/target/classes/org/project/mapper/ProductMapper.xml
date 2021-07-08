@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.ProductMapper"> 
+	<select id="getProductList" resultType="org.project.vo.ProductVO">
+		select * from tbl_product
+	</select>
+	
+	<insert id="insertProduct">
+		INSERT INTO TBL_PRODUCT(P_NUM, P_NAME, P_PRICE, P_QUANTITY, P_SIZE, P_COLOR, P_CONTENT, P_IMAGE, SELL_YN, P_CTG1, P_CTG2, P_HIT, SAVE)
+		VALUES(P_NUM_SEQ.NEXTVAL, '바지', 10000, 1, 'XL', '빨강색', '바지입니다', 'JEAN.JPG', '', '여름', '하의', 1, 100);
+	</insert>
+	
+	<select id="readProduct" resultType="org.project.vo.ProductVO">
+		select * from tbl_product
+		where p_num=#{p_num}
+	</select>
+
+	<select id="readProductForCart" resultType="org.project.vo.CartVO">
+		select p_num, p_price, save
+		from tbl_product
+		where p_num=#{p_num}
+	</select>
+	
+	<select id="readOptionWithPNum" resultType="org.project.vo.OptionVO">
+		select * from tbl_option
+		where p_num=#{p_num}
+	</select>
+	
+	<select id="getListRandom" resultType="org.project.vo.ProductVO">
+		select * from(
+		select * from tbl_product
+		order by DBMS_RANDOM.RANDOM)
+	</select>
+	
+	<select id="getListRandomFirst" resultType="org.project.vo.ProductVO">
+		select * from(
+			select * from tbl_product
+			order by DBMS_RANDOM.RANDOM)
+			where p_ctg1 = #{p_ctg1 }
+	</select>
+	
+	<select id="getListRandomSecond" resultType="org.project.vo.ProductVO">
+		select * from(
+			select * from tbl_product
+			order by DBMS_RANDOM.RANDOM)
+			where p_ctg1 = #{p_ctg1 } and p_ctg2= #{p_ctg2 }
+	</select>
+	
+	
+</mapper>

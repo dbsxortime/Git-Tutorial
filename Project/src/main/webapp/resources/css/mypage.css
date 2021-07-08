@@ -1,0 +1,79 @@
+.page-body {
+	width : 90%;
+	margin:auto;
+	padding:0;
+	text-align: center;
+}
+.t_box{
+	padding-bottom:40px;
+}
+
+.t_box_msg {
+	margin-left : 3%;
+	font-size: 15px;
+}
+
+.orderlist{
+	font-size: 1.5em;
+	margin:0 auto;
+}
+
+.page_list_top{
+	width : 70%;
+	margin:auto;
+}
+
+ .page_list_top button { 
+ 	background-color: black;
+ 	width : 15%;
+ 	text-align: center; 
+ 	color : white;
+ }
+ 
+ 
+#search{
+    background-color: black;
+    color: white;
+    width: 52px;
+    height: 20px;
+    line-height: 2px;
+    font-size: 0.15rem;
+    padding: 0;
+} 
+ 
+ 
+#updateinfo{
+	margin-top: 5px;
+}
+ 
+
+.foot_msg{
+   	font-size: 12px;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.foot_msg li{
+	list-style : none;
+	margin-top: 30px; margin-bottom: 50px;
+}
+
+.order_box{
+	padding-bottom: 50px;
+}
+.table_begin{
+	width : 65%;
+	margin:auto; 
+	font-size: 1.5em;
+}
+
+.table_begin th{
+	padding:0px;
+}
+
+.table_begin td{
+	line-height:2;
+	padding:3px;
+}

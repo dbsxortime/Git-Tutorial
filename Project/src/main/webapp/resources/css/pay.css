@@ -1,0 +1,104 @@
+.pay_all {
+	margin-left: 5%;
+	width : 90%;
+	font-size: 1.5em;
+	font-family: 'Gothic A1', sans-serif;
+}
+#p_image {
+	width: 100px;
+}
+
+ul{
+	list-style: none;
+}
+
+.product_discount{
+	width : 100%;
+}
+
+
+.order_table {
+	width: 700px;
+	text-align: center;
+}
+
+
+
+.button-area{
+margin-top : 20px;
+margin-bottom: 50px;
+}
+
+.userinfo li{
+   margin-bottom: 2%;
+}
+
+.orderinfo li{
+	margin-bottom: 2%;
+}
+
+ .orderinfo li div{
+ margin-top: 10px; margin-bottom: 10px;
+	  }
+
+.pay_info li{
+	list-style: none;
+}
+
+/* .agree li{ */
+/* } */
+
+
+
+.button-area button{
+	width: 100px; background-color: black; color : white;
+}
+
+/*  .button-area input{ */
+/* 	width: 100px; background-color: black; color : white; */
+/* }  */
+
+.tit_img{
+	font-size: 30px;
+}
+
+o_name, o_email, o_phone{
+	width : 200px;
+	border:0;
+	 padding-top:2;
+	  text-align:center;
+}
+
+d_name, d_phone, d_addr{
+	width : 200px;
+	border:0;
+	 padding-top:2;
+	  text-align:center;
+}
+
+/* product order discount{ */
+/* 	font-size: 12px; */
+/* } */
+
+/* h3{ */
+/* 	margin-left: 2%; */
+/* } */
+
+#couponBtn , #saveBtn{
+	width : 8%;
+	background-color: black;
+	color : white;
+}
+#saveBtn{
+	margin-top: -1px;
+}
+
+.buttonarea{
+	margin-top: 2%;
+}
+
+p{
+	font-size: 20px;
+}
+
+

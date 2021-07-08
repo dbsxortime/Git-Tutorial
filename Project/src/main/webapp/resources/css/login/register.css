@@ -1,0 +1,40 @@
+ #content{
+    margin : auto;
+	width : 90%;
+} 
+
+.tit_join{
+	text-align : center;
+	font-size: 30px;
+}
+
+#registerInfo{
+	margin-left: 3%;
+	
+}
+
+/*  u_id,u_pw,confirmpassword,u_name,u_pid,u_addr,u_email,u_phone{
+	
+    width : 200px;
+	
+}  */
+
+.table{
+	margin-left : 20%;
+	width : 60%;
+} 
+
+.table th:first-child{
+	font-size : 15px;
+	width:20%;
+}
+
+#register{
+	width: 12%; background-color: black; color: white; margin-bottom: 5%; margin-left: 68%;
+}
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+
+#content{
+	width : 90%;
+	margin-left: 20%;
+}
+
+.tit_join{
+	margin-left : 30%;
+	font-size: 30px;
+}
+
+#personInfo{
+	margin-left: 3%;
+	width : 90%; 
+	
+}
+
+/* .table begin{
+	width : 50%;
+}
+ */
+/* u_name{ */
+/* 	margin-right: 250px; */
+/* } */
+
+
+  
+ .table{
+ width : 70%;
+ }
+ 
+ .table th:first-child{
+    width : 15%;
+    font-size: 15px;
+ }
+ 
+ .table input{
+ width : 200px;
+ }
+ 
+
+ 

@@ -1,0 +1,38 @@
+.pro_order_complete{
+
+width : 700px;
+margin-left : 100px;
+
+margin-bottom: 100px;
+
+}
+
+
+.order_complete_table{
+text-align: center;
+font-size: 15px;
+width : 500px;
+}
+
+.send_info_table{
+text-align: center;
+font-size: 15px;
+width : 500px;
+}
+
+.post_info_table{
+text-align: center;
+font-size: 15px;
+width : 500px;
+}
+
+
+.butt-area {
+	margin-top: 50px;
+}
+
+.butt-area input{
+	width : 100px;
+	background-color: black;
+	color : white;
+}

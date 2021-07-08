@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.CartMapper"> 
+	<select id="checkMypage" resultType="int">
+		select 
+			count(p_num) as p_num 
+		from tbl_cart
+		where 
+			p_num= #{p_num } and
+			c_size = #{c_size } and
+			u_id = #{u_id } and
+			ispay=0
+	</select>
+	
+	<select id="checkRepeatedCNum" resultType="int">
+		select 
+			c_num 
+		from tbl_cart	
+		where 
+			p_num= #{p_num } and
+			c_size = #{c_size } and
+			u_id = #{u_id } and
+			ispay=0
+	</select>
+	
+	
+	<!-- update mypage when product repeated ============BEGIN==========-->
+	<update id="updateMyPageWithChecker">
+		update tbl_cart set
+		    c_quantity= c_quantity + #{c_quantity }
+		where
+		    u_id= #{u_id } and
+		    c_num= #{c_num } and
+		    ispay =0
+	</update>
+	<update id="updateMyPagePriceWithChecker">
+		update tbl_cart set
+		    total_price=(
+		        select p_price from tbl_product
+		        where p_num= #{p_num }
+		    ) * c_quantity,
+		    save =(
+		        select save from tbl_product
+		        where p_num= #{p_num }
+		    ) * c_quantity
+		where
+		    u_id= #{u_id } and
+		    c_num= #{c_num } and
+		    ispay =0
+	</update>
+	<!-- update mypage when product repeated  ============END==========  -->
+	
+	<select id="getSelectedCartListFromProduct" resultType="org.project.vo.CartVO">
+		select * from tbl_Product
+		where p_name=#{p_name}
+	</select>
+	
+	<select id="getCartById" resultType="org.project.vo.CartVO">
+		SELECT crt.c_num, crt.u_id, crt.c_quantity, crt.c_size, crt.discount, crt.save, crt.total_price, pd.p_num,pd.p_name, p_price, p_content, p_image, p_ctg1, p_ctg2
+		FROM tbl_cart crt 
+		JOIN tbl_product pd 
+		ON crt.p_num = pd.p_num
+		where u_id=#{u_id} and ispay = 0
+		order by c_num
+	</select>
+	
+	<insert id="insertCart">
+		insert into tbl_cart
+			(c_num,u_id, p_num,c_quantity,c_size, discount, total_price, save)
+		values
+			(c_num_seq.nextval,#{u_id}, #{p_num},#{c_quantity},#{c_size}, #{discount}, #{total_price}, #{save})
+	</insert>
+	
+	<insert id="insertOption">
+		insert into tbl_option
+			(op_idx, p_num, op_quantity, op_size)
+		values
+			(OP_NUM_SEQ.NEXTVAL, #{p_num}, #{op_quantity}, #{op_size})
+	</insert>
+	
+	<delete id="deleteCart">
+		delete from tbl_cart
+		where c_num=#{c_num} and ispay = 0
+	</delete>
+	
+	<delete id="deleteAllCart">
+		delete from tbl_cart
+		where u_id=#{u_id} and ispay = 0
+	</delete>
+	
+	<select id="getAllPriceById" resultType="int" >
+		select sum(total_price)
+		from tbl_cart
+		where u_id=#{u_id} and ispay = 0
+	</select>
+	
+	<select id="getAllSaveById" resultType="int" >
+		select sum(save)
+		from tbl_cart
+		where u_id=#{u_id} and ispay = 0
+	</select>
+	
+	<select id="getCartListByCNum">
+		select * from tbl_cart
+		where c_num=#{c_num}
+	</select>			<!-- list for transactionVO -->
+	<!-- update cart when modify cart  ============START==========  -->
+	<update id="updateOption">
+		update tbl_cart set
+			c_quantity = #{changeamount },
+			c_size = #{changeoption}
+		where u_id=#{u_id } and c_num=#{c_num }
+	</update>
+	<select id="getPnum" resultType="int">
+		select p_num
+		from tbl_cart
+		where c_num = #{c_num}
+	</select>
+	<!-- update cart when modify cart  ============END==========  -->
+	
+</mapper>

@@ -1,0 +1,74 @@
+
+
+#optionBtn{
+	background-color: black;
+    color : white;
+}
+
+.cart_all{
+width : 90%;
+margin-bottom: 5%;
+font-size: 12px;
+position : relative;
+font-family: 'Poppins', sans-serif;
+
+}
+
+#p_image{
+width: 20%;
+}
+
+
+.order_butt{
+margin-left: 30%;
+
+}
+
+
+.pro_list{
+margin-left: 5%;
+}
+
+.tit_img{
+font-size : 30px;
+margin-left: 5%;
+}
+
+.selectall{
+	margin-left: 5%;
+	margin-bottom: 3%;
+}
+
+.product_discount{
+	width: 50%; margin-left: 30%; margin-top: 5%;
+}
+
+.product_order_discount{
+	margin-left: 15%;
+}
+
+
+#ongoing_butt, #clear_butt, #order_butt{
+font-size : 15px;
+width : 24%;
+background-color: black;
+color : white;
+margin-top: -1.5px;	
+overflow : visible;
+padding : 0;
+}
+
+.order_butt{
+	margin-left: 30%;
+}
+
+
+/* .deltebutton { */
+/*  color: yellow; */
+/*  text-decoration: none; */
+/*  transition: 1s; */
+/* } */
+/* .deltebutton:hover { text-shadow: 0 0 .1em, 0 0 .3em; } */
+
+
+

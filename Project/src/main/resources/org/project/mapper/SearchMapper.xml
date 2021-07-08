@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.SearchMapper"> 
+	<select id="searchProduct" resultType="org.project.vo.ProductVO">
+		SELECT * FROM TBL_PRODUCT
+   		WHERE (P_NAME || P_CONTENT) like '%'||#{keyword}||'%'
+	</select>
+	
+	<select id="searchProductWithPrice" resultType="org.project.vo.ProductVO">
+		SELECT * FROM TBL_PRODUCT
+   		WHERE (P_NAME || P_CONTENT || P_CTG1 || P_CTG2) like '%'||#{keyword}||'%'
+        AND P_PRICE BETWEEN #{price1} AND #{price2}
+	</select>
+	
+	<select id="searchNoticeWithTitle" resultType="org.project.vo.NoticeVO">
+		SELECT * FROM TBL_NOTICE
+   		WHERE n_title like '%'||#{keyword}||'%'
+   		order by n_num desc
+	</select>
+	<select id="searchNoticeWithContext" resultType="org.project.vo.NoticeVO">
+		SELECT * FROM TBL_NOTICE
+   		WHERE n_context like '%'||#{keyword}||'%'
+   		order by n_num desc
+	</select>
+	
+	
+	
+	
+	<select id="searchQandAWithid" resultType="org.project.vo.QandAVO">
+		SELECT * FROM TBL_QA
+   		WHERE 
+   		u_id like '%'||#{keyword}||'%'
+   		order by q_bno desc
+	</select>
+	
+	
+	<select id="searchQandAWithTitle" resultType="org.project.vo.QandAVO">
+		SELECT * FROM TBL_QA
+   		WHERE q_title like '%'||#{keyword}||'%'
+   		order by q_bno desc
+	</select>
+	
+	<select id="searchQandAWithContext" resultType="org.project.vo.QandAVO">
+		SELECT * FROM TBL_QA
+   		WHERE q_content like '%'||#{keyword}||'%'
+   		order by q_bno desc
+	</select>
+	
+	
+	
+	
+</mapper>

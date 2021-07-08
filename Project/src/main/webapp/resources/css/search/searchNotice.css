@@ -1,0 +1,45 @@
+.total{
+	padding: 25px;
+	width: 80%;
+	margin-left: 150px;
+}
+.notice{
+	width: 100%;
+	height: 100px;
+	padding-top:40px;
+	text-align: center;
+	color: gray;	
+	font-size: 1.2em;
+	margin-left: -50px;
+}
+ 
+.row{
+	font-size: 0.75em;
+	color: gray;
+	padding: 8px;
+}
+
+.table th{
+	text-align: center;
+}
+
+.table td{
+	font-size: 0.9em;
+	color: gray;
+}
+
+.table td:nth-child(1) {
+	text-align:center;
+	width: 5em;
+}
+.table td:nth-child(2) {
+	text-align:left;
+	padding-left: 3em;
+}
+.table td:nth-child(3) {
+	text-align:center;
+	width: 8em;
+}
+.table td:nth-child(4) {
+	width: 8em;
+}

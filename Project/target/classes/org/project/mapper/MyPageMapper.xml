@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project.mapper.MyPageMapper"> 
+	<select id="getPayedMyPageLists" resultType="org.project.vo.MyPageVO">
+	<![CDATA[
+		select od.o_num, od.o_date, jct.p_name, jct.total_price, jct.c_num,
+			case 
+		        when od.o_date <= sysdate and sysdate <= od.o_date+1 then '배송전'
+		        when od.o_date+1 <= sysdate and sysdate <= od.o_date+2 then '배송중'
+		        else '배송완료'
+		    end as delievery_status
+		from tbl_order od
+		join 
+		    (select pd.p_name, ct.p_num, ct.total_price, ct.ispay, ct.u_id, ct.c_num
+		    from tbl_product pd
+		    join tbl_cart ct
+		    on pd.p_num=ct.p_num) jct
+		on od.o_num = jct.ispay
+		where jct.u_id=#{u_id} and jct.ispay!=0
+		order by od.o_date desc
+		]]>
+	</select>
+	
+	<select id="getListsOrderPopUp" resultType="org.project.vo.OrderVO">
+	<![CDATA[
+		select o_num, u_id, o_name, o_phone, o_email, o_msg, o_date, o_pay,
+		d_name, d_phone, d_addr, final_price, o_option, delievery_fee,
+		discount,
+			case
+				when od.o_date <= sysdate and sysdate <= od.o_date+1 then '배송전'
+				when od.o_date+1 <= sysdate and sysdate <= od.o_date+2 then '배송중'
+			else '배송완료'
+			end as delievery_status
+		from tbl_order od
+		where o_num=#{o_num}
+	]]>
+	</select> 
+	
+	<select id="getPNameLists" resultType="org.project.vo.CartVO">
+		select pd.p_name, ct.p_num, ct.total_price, 
+		ct.ispay, ct.u_id, ct.c_num, ct.c_size, ct.c_quantity
+	    from tbl_product pd
+	    join tbl_cart ct
+	    on pd.p_num=ct.p_num
+		where ispay=#{o_num}
+	</select>
+	
+	<select id="getCouponKeys" resultType="org.project.vo.CouponVO">
+		select cp_key, PATTERN
+		from tbl_coupon
+	</select>
+	
+	<select id="getMyCoupon" resultType="org.project.vo.CouponVO">
+	<![CDATA[
+		select *
+		from 
+			tbl_coupon cp
+		LEFT JOIN
+			tbl_coupon_user cpu on cp.cp_num = cpu.cp_num
+		where cpu.u_id=#{u_id} and cpu.isused= 0
+	]]>
+	</select>
+	
+	
+</mapper>
