@@ -44,7 +44,7 @@
 	 					</td> 
 	 					<td><c:out value="${list.delievery_status}" /></td> 
 	 				</tr> 
-	 			</c:forEach> 
+	 			</c:forEach>
 			</table>
 
 

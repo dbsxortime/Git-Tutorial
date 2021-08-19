@@ -23,7 +23,7 @@
 				<br/>
 				<br/>
 				<input type="button" value="쿠폰 등록" 
- 				onclick="cuponregister();" style="background-color: black; color : white;">
+ 				onclick="couponregister();" style="background-color: black; color : white;">
  				<input type="button" value="닫기" 
  				onclick="cancel();" style="background-color: black; color : white;">
 		<br /><br />
@@ -31,7 +31,7 @@
 	</div>
 
 <script type="text/javascript">
-    	function cuponregister(){
+    	function couponregister(){
 			var serial = $("#serial").val();
 	 
 			if(confirm('작성된 쿠폰을 입력 하시겠습니까?')===true){

@@ -38,7 +38,6 @@
 			<label style="font-size: 15px;">일치하는 정보가 존재하지 않습니다.</label>
 		</c:if>
 
-		<!-- 이름과 비밀번호가 일치하지 않을 때 -->
 		<c:if test="${check == 0 }">
 		<label style="font-size: 15px;">찾으시는 아이디는' ${id}' 입니다.</label>
 		<div class="form-label-group">

@@ -42,11 +42,11 @@ public class UserController {
       log.info("logout : " + logout);
       
       if(error != null) {
-         model.addAttribute("error", "?떎?떆 ?떆?룄?빐二쇱꽭?슂.");
+         model.addAttribute("error", "로그인 정보를 확인 해 주세요.");
       }
       
       if(logout != null) {
-         model.addAttribute("logout", "濡쒓렇?븘?썐?씠 ?셿猷? ?릺?뿀?뒿?땲?떎.");
+         model.addAttribute("logout", "로그아웃이 성공적으로 완료 되었습니다.");
       }
       
    }
