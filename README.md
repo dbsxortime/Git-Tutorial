@@ -127,7 +127,7 @@
 <a href="#top">위로 가기</a>
 <br/><br/>
 
-<br id="#notice"/>
+<br id="notice"/>
 <h4>공지 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/notice/list.jsp">JSP</a>
