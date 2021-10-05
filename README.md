@@ -13,15 +13,15 @@
 
 <p>사용 라이브러리 :</p>
 <span>
-  log4j   /로그를 위한 라이브러리<br/>
-  servlet /MVC패턴 중 controller 구현을 위한 라이브러리<br/>
-  lombok /vo의 객체, getter, setter를 위한 라이브러리<br/>
-  junit   /서버 일부분의 테스트를 위한 라이블러리<br/>
-  springframework /동적인 웹사이트 구현을 위한 프레임워크 적용<br/>
-  Hikari  /DB커넥션을 위한 라이브러리<br/>
-  mybatis /매핑을 위한 라이브러리<br/>
-  jackson /json처리를 위한 라이브러리<br/>
-  spring-security /유저관련 기능 구현을 위한 라이브러리
+  log4j     /로그를 위한 라이브러리<br/>
+  servlet   /MVC패턴 중 controller 구현을 위한 라이브러리<br/>
+  lombok    /vo의 객체, getter, setter를 위한 라이브러리<br/>
+  junit     /서버 일부분의 테스트를 위한 라이블러리<br/>
+  springframework   /동적인 웹사이트 구현을 위한 프레임워크 적용<br/>
+  Hikari    /DB커넥션을 위한 라이브러리<br/>
+  mybatis   /매핑을 위한 라이브러리<br/>
+  jackson   /json처리를 위한 라이브러리<br/>
+  spring-security   /유저관련 기능 구현을 위한 라이브러리
 </span>
 <br/><br/>
 <span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%), 프로젝트 문서(100%, 하단 링크)</strong></span>
