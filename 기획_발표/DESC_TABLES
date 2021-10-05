@@ -1,129 +1,129 @@
-#PERSISTENT_LOGINS : ·Î±×ÀÎÀ¯ÁöÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§        ³Î?       À¯Çü           
+#PERSISTENT_LOGINS : ë¡œê·¸ì¸ìœ ì§€ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„        ë„?       ìœ í˜•           
 --------- -------- ------------ 
-USERNAME  NOT NULL VARCHAR2(64)      / ÀÌ¸§
-SERIES    NOT NULL VARCHAR2(64)      / ½Ã¸®Áî
-TOKEN     NOT NULL VARCHAR2(64)       / ÅäÅ«Á¤º¸
-LAST_USED NOT NULL TIMESTAMP(6)      / ¸¶Áö¸··Î±×ÀÎ
+USERNAME  NOT NULL VARCHAR2(64)      / ì´ë¦„
+SERIES    NOT NULL VARCHAR2(64)      / ì‹œë¦¬ì¦ˆ
+TOKEN     NOT NULL VARCHAR2(64)       / í† í°ì •ë³´
+LAST_USED NOT NULL TIMESTAMP(6)      / ë§ˆì§€ë§‰ë¡œê·¸ì¸
 
 
-#TBL_USER : À¯ÀúÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§       ³Î?       À¯Çü            
+#TBL_USER : ìœ ì €ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„       ë„?       ìœ í˜•            
 -------- -------- ------------- 
-U_ID     NOT NULL VARCHAR2(20)        / À¯ÀúID
-U_NAME   NOT NULL VARCHAR2(20)        / À¯ÀúÀÌ¸§
-U_PW     NOT NULL VARCHAR2(100)       / À¯Àúºñ¹Ð¹øÈ£
-U_PID    NOT NULL VARCHAR2(20)        / À¯ÀúÁÖ¹Îµî·Ï¹øÈ£(ÆíÀÇ»óSTRINGÇüÅÂ·Î ÀúÀå)
-U_ADDR   NOT NULL VARCHAR2(100)       / À¯ÀúÁÖ¼Ò
-U_EMAIL  NOT NULL VARCHAR2(40)        / À¯ÀúÀÌ¸ÞÀÏ
-REG_DATE          DATE                / °¡ÀÔÀÏ
-SAVE              NUMBER              / Æ÷ÀÎÆ®(Àû¸³±Ý)
-U_PHONE           VARCHAR2(20)        / ÈÞ´ëÆù¹øÈ£
+U_ID     NOT NULL VARCHAR2(20)        / ìœ ì €ID
+U_NAME   NOT NULL VARCHAR2(20)        / ìœ ì €ì´ë¦„
+U_PW     NOT NULL VARCHAR2(100)       / ìœ ì €ë¹„ë°€ë²ˆí˜¸(ì•”í˜¸í™”ë˜ì–´ ì €ìž¥)
+U_PID    NOT NULL VARCHAR2(20)        / ìœ ì €ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸(íŽ¸ì˜ìƒSTRINGí˜•íƒœë¡œ ì €ìž¥)
+U_ADDR   NOT NULL VARCHAR2(100)       / ìœ ì €ì£¼ì†Œ
+U_EMAIL  NOT NULL VARCHAR2(40)        / ìœ ì €ì´ë©”ì¼
+REG_DATE          DATE                / ê°€ìž…ì¼
+SAVE              NUMBER              / í¬ì¸íŠ¸(ì ë¦½ê¸ˆ)
+U_PHONE           VARCHAR2(20)        / íœ´ëŒ€í°ë²ˆí˜¸
 
 
-#TBL_AUTH : À¯Àú ±ÇÇÑÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§   ³Î? À¯Çü           
+#TBL_AUTH : ìœ ì € ê¶Œí•œì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„   ë„? ìœ í˜•           
 ---- -- ------------ 
-U_ID    VARCHAR2(50)       / À¯ÀúID
-AUTH    VARCHAR2(50)       / À¯Àú±ÇÇÑÁ¤º¸
+U_ID    VARCHAR2(50)       / ìœ ì €ID
+AUTH    VARCHAR2(50)       / ìœ ì €ê¶Œí•œì •ë³´
 
 
-#TBL_PRODUCT : »óÇ°Á¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§         ³Î?       À¯Çü           
+#TBL_PRODUCT : ìƒí’ˆì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„         ë„?       ìœ í˜•           
 ---------- -------- ------------ 
-P_NUM      NOT NULL NUMBER         / »óÇ°¹øÈ£
-P_NAME              VARCHAR2(50)       / »óÇ°ÀÌ¸§
-P_PRICE             NUMBER             / »óÇ°°¡°Ý
-P_CONTENT           CLOB               / »óÇ°³»¿ë
-P_CONT_IMG          VARCHAR2(20)       / »óÇ°ÀÌ¹ÌÁö
-P_CTG1              VARCHAR2(20)       / »óÇ°1Â÷Ä«Å×°í¸®
-P_CTG2              VARCHAR2(20)       / »óÇ°2Â÷Ä«Å×°í¸®
-SAVE                NUMBER             / »óÇ° Àû¸³±Ý
-P_IMAGE             VARCHAR2(50)       / »óÇ° ¸ÞÀÎÀÌ¹ÌÁö
+P_NUM      NOT NULL NUMBER         / ìƒí’ˆë²ˆí˜¸
+P_NAME              VARCHAR2(50)       / ìƒí’ˆì´ë¦„
+P_PRICE             NUMBER             / ìƒí’ˆê°€ê²©
+P_CONTENT           CLOB               / ìƒí’ˆë‚´ìš©
+P_CONT_IMG          VARCHAR2(20)       / ìƒí’ˆì´ë¯¸ì§€
+P_CTG1              VARCHAR2(20)       / ìƒí’ˆ1ì°¨ì¹´í…Œê³ ë¦¬
+P_CTG2              VARCHAR2(20)       / ìƒí’ˆ2ì°¨ì¹´í…Œê³ ë¦¬
+SAVE                NUMBER             / ìƒí’ˆ ì ë¦½ê¸ˆ
+P_IMAGE             VARCHAR2(50)       / ìƒí’ˆ ë©”ì¸ì´ë¯¸ì§€
 
 
-#TBL_CART : Àå¹Ù±¸´ÏÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§          ³Î?       À¯Çü           
+#TBL_CART : ìž¥ë°”êµ¬ë‹ˆì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„          ë„?       ìœ í˜•           
 ----------- -------- ------------ 
-C_NUM       NOT NULL NUMBER             / Ä«Æ®¹øÈ£
-P_NUM                NUMBER             / »óÇ°¹øÈ£
-U_ID                 VARCHAR2(20)       / À¯Àú¾ÆÀÌµð
-C_QUANTITY           NUMBER             / ¼ö·®
-C_SIZE      NOT NULL VARCHAR2(20)       / »çÀÌÁî
-DISCOUNT             NUMBER             / ÇÒÀÎ°¡
-TOTAL_PRICE          NUMBER             / ÃÑ°¡°Ý
-ISPAY                NUMBER             / °áÁ¦µÇ¾ú´ÂÁö(0 OR 1)
-SAVE                 NUMBER          / Àû¸³±Ý
+C_NUM       NOT NULL NUMBER             / ì¹´íŠ¸ë²ˆí˜¸
+P_NUM                NUMBER             / ìƒí’ˆë²ˆí˜¸
+U_ID                 VARCHAR2(20)       / ìœ ì €ì•„ì´ë””
+C_QUANTITY           NUMBER             / ìˆ˜ëŸ‰
+C_SIZE      NOT NULL VARCHAR2(20)       / ì‚¬ì´ì¦ˆ
+DISCOUNT             NUMBER             / í• ì¸ê°€
+TOTAL_PRICE          NUMBER             / ì´ê°€ê²©
+ISPAY                NUMBER             / ê²°ì œë˜ì—ˆëŠ”ì§€(0 OR 1)
+SAVE                 NUMBER          / ì ë¦½ê¸ˆ
 
   
-#TBL_OPTION : »óÇ° ¿É¼ÇÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§          ³Î?       À¯Çü           
+#TBL_OPTION : ìƒí’ˆ ì˜µì…˜ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„          ë„?       ìœ í˜•           
 ----------- -------- ------------ 
-OP_IDX      NOT NULL NUMBER             / ¿É¼Ç¹øÈ£
-P_NUM       NOT NULL NUMBER             / »óÇ°¹øÈ£
-OP_QUANTITY          NUMBER             / »óÇ°¼ö·®
-OP_SIZE     NOT NULL VARCHAR2(20)       / »óÇ°¿É¼Ç
+OP_IDX      NOT NULL NUMBER             / ì˜µì…˜ë²ˆí˜¸
+P_NUM       NOT NULL NUMBER             / ìƒí’ˆë²ˆí˜¸
+OP_QUANTITY          NUMBER             / ìƒí’ˆìˆ˜ëŸ‰
+OP_SIZE     NOT NULL VARCHAR2(20)       / ìƒí’ˆì˜µì…˜
 
 
-#TBL_ORDER : ÁÖ¹®Á¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§            ³Î?       À¯Çü            
+#TBL_ORDER : ì£¼ë¬¸ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„            ë„?       ìœ í˜•            
 ------------- -------- ------------- 
-O_NUM         NOT NULL NUMBER              / ÁÖ¹®¹øÈ£
-U_ID          NOT NULL VARCHAR2(20)        / À¯Àú¾ÆÀÌµð
-O_NAME        NOT NULL VARCHAR2(20)        / ÁÖ¹®ÀÚÀÌ¸§
-O_EMAIL       NOT NULL VARCHAR2(50)        / ÁÖ¹®ÀÚÀÌ¸ÞÀÏ
-O_MSG                  VARCHAR2(100)       / ¹è¼Û¸Þ½ÃÁö
-O_DATE                 DATE                / ÁÖ¹®ÀÏ
-O_PAY         NOT NULL NUMBER              / ÁÖ¹®°¡°Ý
-D_NAME        NOT NULL VARCHAR2(20)        / ¹Þ´Â»ç¶÷ÀÌ¸§
-D_ADDR        NOT NULL VARCHAR2(100)       / ¹Þ´Â»ç¶÷ÁÖ¼Ò
-FINAL_PRICE   NOT NULL NUMBER              / ÃÖÁ¾°¡°Ý(ÁÖ¹®°¡°Ý-ÇÒÀÎ°¡)
-O_OPTION               VARCHAR2(50)        / ÁÖ¹®»óÇ°¿É¼Ç
-DELIEVERY_FEE          NUMBER              / ¹è¼Ûºñ(ÀÚµ¿°è»êµÇ¾îµé¾î¿È)
-DISCOUNT               NUMBER              / ÇÒÀÎ°¡
-O_PHONE                VARCHAR2(20)        / ÁÖ¹®ÀÚ¹øÈ£
-D_PHONE                VARCHAR2(20)        / ¹Þ´Â»ç¶÷¹øÈ£
+O_NUM         NOT NULL NUMBER              / ì£¼ë¬¸ë²ˆí˜¸
+U_ID          NOT NULL VARCHAR2(20)        / ìœ ì €ì•„ì´ë””
+O_NAME        NOT NULL VARCHAR2(20)        / ì£¼ë¬¸ìžì´ë¦„
+O_EMAIL       NOT NULL VARCHAR2(50)        / ì£¼ë¬¸ìžì´ë©”ì¼
+O_MSG                  VARCHAR2(100)       / ë°°ì†¡ë©”ì‹œì§€
+O_DATE                 DATE                / ì£¼ë¬¸ì¼
+O_PAY         NOT NULL NUMBER              / ì£¼ë¬¸ê°€ê²©
+D_NAME        NOT NULL VARCHAR2(20)        / ë°›ëŠ”ì‚¬ëžŒì´ë¦„
+D_ADDR        NOT NULL VARCHAR2(100)       / ë°›ëŠ”ì‚¬ëžŒì£¼ì†Œ
+FINAL_PRICE   NOT NULL NUMBER              / ìµœì¢…ê°€ê²©(ì£¼ë¬¸ê°€ê²©-í• ì¸ê°€)
+O_OPTION               VARCHAR2(50)        / ì£¼ë¬¸ìƒí’ˆì˜µì…˜
+DELIEVERY_FEE          NUMBER              / ë°°ì†¡ë¹„(ìžë™ê³„ì‚°ë˜ì–´ë“¤ì–´ì˜´)
+DISCOUNT               NUMBER              / í• ì¸ê°€
+O_PHONE                VARCHAR2(20)        / ì£¼ë¬¸ìžë²ˆí˜¸
+D_PHONE                VARCHAR2(20)        / ë°›ëŠ”ì‚¬ëžŒë²ˆí˜¸
 
 
-#TBL_COUPON : ÄíÆùÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§          ³Î?       À¯Çü           
+#TBL_COUPON : ì¿ í°ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„          ë„?       ìœ í˜•           
 ----------- -------- ------------ 
-CP_NUM      NOT NULL NUMBER             / ÄíÆù¹øÈ£
-CP_NAME     NOT NULL VARCHAR2(50)       / ÄíÆùÀÌ¸§
-CP_KEY               VARCHAR2(20)       / ÄíÆùÅ°
-CP_POSSIBLE          NUMBER             / ÄíÆù»ç¿ë°¡´É (1 OR 0)
-CP_DISCOUNT NOT NULL NUMBER             / ÄíÆùÇÒÀÎ°¡
-CP_REGDATE           DATE               / ÄíÆùµî·ÏÀÏ
-CP_EXPIRE            NUMBER             / ÄíÆù»ç¿ë±âÇÑ
+CP_NUM      NOT NULL NUMBER             / ì¿ í°ë²ˆí˜¸
+CP_NAME     NOT NULL VARCHAR2(50)       / ì¿ í°ì´ë¦„
+CP_KEY               VARCHAR2(20)       / ì¿ í°í‚¤
+CP_POSSIBLE          NUMBER             / ì¿ í°ì‚¬ìš©ê°€ëŠ¥ (1 OR 0)
+CP_DISCOUNT NOT NULL NUMBER             / ì¿ í°í• ì¸ê°€
+CP_REGDATE           DATE               / ì¿ í°ë“±ë¡ì¼
+CP_EXPIRE            NUMBER             / ì¿ í°ì‚¬ìš©ê¸°í•œ
 
 
-#TBL_COUPON_USER : À¯Àú°¡ °¡Áø ÄíÆùÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§         ³Î?       À¯Çü           
+#TBL_COUPON_USER : ìœ ì €ê°€ ê°€ì§„ ì¿ í°ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„         ë„?       ìœ í˜•           
 ---------- -------- ------------ 
-CPU_NUM    NOT NULL NUMBER             / ÄíÆùµî·Ï¹øÈ£
-U_ID                VARCHAR2(50)       / À¯Àú¾ÆÀÌµð
-CP_NUM              NUMBER             / ÄíÆù¹øÈ£
-ISUSED              NUMBER             / »ç¿ëÀ¯¹« (1 OR 0)
-CPU_EXPIRE          DATE               / µî·ÏÄíÆù»ç¿ë±âÇÑ
+CPU_NUM    NOT NULL NUMBER             / ì¿ í°ë“±ë¡ë²ˆí˜¸
+U_ID                VARCHAR2(50)       / ìœ ì €ì•„ì´ë””
+CP_NUM              NUMBER             / ì¿ í°ë²ˆí˜¸
+ISUSED              NUMBER             / ì‚¬ìš©ìœ ë¬´ (1 OR 0)
+CPU_EXPIRE          DATE               / ë“±ë¡ì¿ í°ì‚¬ìš©ê¸°í•œ
 
 
-#TBL_NOTICE : °øÁöÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§        ³Î?       À¯Çü           
+#TBL_NOTICE : ê³µì§€ì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„        ë„?       ìœ í˜•           
 --------- -------- ------------ 
-N_NUM     NOT NULL NUMBER             / °øÁö¹øÈ£
-N_TITLE   NOT NULL VARCHAR2(20)       / °øÁöÁ¦¸ñ
-N_CONTEXT          CLOB               / °øÁö³»¿ë
-ADMIN_ID  NOT NULL VARCHAR2(20)       / °ü¸®ÀÚ¾ÆÀÌµð(»ç¿ëX, ¸ðµç°ü¸®ÀÚ´Â '°ü¸®ÀÚ'·Î ÀúÀå)
-N_REGDATE          DATE               / °øÁöÀÛ¼ºÀÏ
+N_NUM     NOT NULL NUMBER             / ê³µì§€ë²ˆí˜¸
+N_TITLE   NOT NULL VARCHAR2(20)       / ê³µì§€ì œëª©
+N_CONTEXT          CLOB               / ê³µì§€ë‚´ìš©
+ADMIN_ID  NOT NULL VARCHAR2(20)       / ê´€ë¦¬ìžì•„ì´ë””(ì‚¬ìš©X, ëª¨ë“ ê´€ë¦¬ìžëŠ” 'ê´€ë¦¬ìž'ë¡œ ì €ìž¥)
+N_REGDATE          DATE               / ê³µì§€ìž‘ì„±ì¼
 
 
-#TBL_QA : Q&AÁ¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
-ÀÌ¸§        ³Î?       À¯Çü             
+#TBL_QA : Q&Aì •ë³´ë¥¼ ì €ìž¥í•˜ëŠ” í…Œì´ë¸”
+ì´ë¦„        ë„?       ìœ í˜•             
 --------- -------- -------------- 
-Q_BNO     NOT NULL NUMBER               / Q&A¹øÈ£
-U_ID               VARCHAR2(20)           / À¯Àú¾ÆÀÌµð
-Q_TITLE   NOT NULL VARCHAR2(200)          / Q&AÁ¦¸ñ
-Q_CONTENT          CLOB                   / Q&A³»¿ë
-Q_REGDATE          DATE                   / Q&AÀÛ¼ºÀÏ
-ISSECRET           VARCHAR2(10)           / Q&Aºñ¹Ð±Û¿©ºÎ
-ANSWER             VARCHAR2(2000)         / Q&A´äº¯
+Q_BNO     NOT NULL NUMBER               / Q&Aë²ˆí˜¸
+U_ID               VARCHAR2(20)           / ìœ ì €ì•„ì´ë””
+Q_TITLE   NOT NULL VARCHAR2(200)          / Q&Aì œëª©
+Q_CONTENT          CLOB                   / Q&Aë‚´ìš©
+Q_REGDATE          DATE                   / Q&Aìž‘ì„±ì¼
+ISSECRET           VARCHAR2(10)           / Q&Aë¹„ë°€ê¸€ì—¬ë¶€
+ANSWER             VARCHAR2(2000)         / Q&Aë‹µë³€
