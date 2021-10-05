@@ -38,7 +38,7 @@
 <p>장바구니 수정 : 기존상품에 동일한 옵션 있을 시 수량 추가 선택 가능</p>
 <br/><br/>
 
-<h4>카트기능 관련</h4> <br/>
+<h4>카트기능 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/cart/cart.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/CartController.java">Controller</a>
@@ -50,7 +50,7 @@
 <p>장바구니 삭제기능 : 상품별 삭제 또는 장바구니 비우기 기능 추가.</p>
 <br/><br/>
 
-<h4>구매기능 관련</h4> <br/>
+<h4>구매기능 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/pay/pay.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/PayController.java">Controller</a>
@@ -65,7 +65,7 @@
 <p>옵션 : 구매상품 옵션 업데이트(수량)</p>
 <br/><br/>
 
-<h4>마이페이지 관련</h4> <br/>
+<h4>마이페이지 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/mypage/mypage.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/MyPageController.java">Controller</a>
@@ -75,7 +75,7 @@
 <p>주문 상세 조회 시 : 각각의 정보를 가지고 있는 '주문', '카트', '상품' 정보를 join하여 정보 가져오는 sql문 작성</p>
 <br/><br/>
 
-<h4>Q&A 관련</h4> <br/>
+<h4>Q&A 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/QandA/list.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/QandAController.java">Controller</a>
@@ -86,7 +86,7 @@
 <p>마이페이지에서 사용자 본인이 쓴 게시물만 보기 구현</p>
 <br/><br/>
 
-<h4>공지 관련</h4> <br/>
+<h4>공지 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/notice/list.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/NoticeController.java">Controller</a>
