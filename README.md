@@ -17,7 +17,9 @@
 <br/>
 <h3>기능 변경사항 </h3> <br/>
 
-<h4>유저기능 관련</h4> <br/>
+<h4>유저기능 관련</h4> 
+<input type="button" value="코드보러가기" href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login"/>
+<br/>
 <p>정규식을 통한 입력정보 조건 부여</p>
 <p>jquery ajax를 통한 비동기처리를 통한 회원정보 중복유무 확인</p>
 <p>모든 사용자, 로그인이용자(회원), 관리자 권한설정을 통한 사용자 이용권한 제한 </p>
