@@ -18,7 +18,7 @@
 <h3>기능 변경사항 </h3> <br/>
 
 <h4>유저기능 관련</h4> 
-<input type="button" value="코드보러가기" href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login"/>
+<input type="button" value="코드보러가기" href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login" style="width:50px"/>
 <br/>
 <p>정규식을 통한 입력정보 조건 부여</p>
 <p>jquery ajax를 통한 비동기처리를 통한 회원정보 중복유무 확인</p>
