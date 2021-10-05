@@ -32,9 +32,14 @@
 <p>심플하고 직관적인 디자인으로 전반적으로 변경</p>
 <p>버튼, 입력창, 로고 등 컨셉에 맞는 디자인으로 변경</p>
 
+<br/><br id="top"/>
+<h3>기능 변경사항 </h3> 
 <br/><br/>
-<h3>기능 변경사항 </h3> <br/>
+<a href="#user">go to user</a>
+<a href="#notice">go to notice</a>
 
+
+<br id="#user"/>
 <h4>유저기능 관련</h4> 
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login">JSP</a>
@@ -44,6 +49,7 @@
 <p>정규식을 통한 입력정보 조건 부여</p>
 <p>jquery ajax를 통한 비동기처리를 통한 회원정보 중복유무 확인</p>
 <p>모든 사용자, 로그인이용자(회원), 관리자 권한설정을 통한 사용자 이용권한 제한 </p>
+<a href="#top">위로 가기</a>
 <br/><br/>
 
 <h4>상품기능 관련</h4>
@@ -103,7 +109,7 @@
 <p>관리자 답변 : jquery ajax를 통한 비동기통신으로 답변달기 기능 구현</p>
 <p>마이페이지에서 사용자 본인이 쓴 게시물만 보기 구현</p>
 <br/><br/>
-
+<br id="#notice"/>
 <h4>공지 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/notice/list.jsp">JSP</a>
@@ -113,4 +119,4 @@
 <p>단순 게시물 CRUD 구현</p>
 <p>create, update, delete는 관리자만 가능</p>
 <p>모든 사용자 read 가능</p>
-
+<a href="#top">위로 가기</a>
