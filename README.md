@@ -8,7 +8,7 @@
 
 <p>기술 사용 스택</p>
 <span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span><br/>
-<span>eclipse, VSCODE, GitHub</span>
+<span>eclipse VSCODE GitHub Zeplin</span>
 <br/><br/>
 
 <p>사용 라이브러리 :</p>
