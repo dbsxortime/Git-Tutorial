@@ -1,4 +1,4 @@
-# my-project
+# my-project (ROGO / shoppingmall)
 <span>작업기간 : 2021.06 ~ 2021.07 [2명, 4주]</span> <br/>
 <p>
   기존 쇼핑몰을 개선하기위한 가상 의뢰 프로젝트이다. <br/>
