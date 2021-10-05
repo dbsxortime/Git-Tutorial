@@ -1,11 +1,26 @@
 # my-project
-<span>작업기간 : 2021.06 ~ 2021.07 [2명, 4주]</span>
-<br/>
-<span>파트 : 화면구현, 서버구현, SQL문 작성, DB설계 수정</span>
+<span>작업기간 : 2021.06 ~ 2021.07 [2명, 4주]</span> <br/>
+
+<p>기술 사용 스택</p>
+<span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span>
+<span>eclipse, VSCODE, GitHub</span>
+<span>사용 라이브러리 :</span>
+<span>
+  log4j   /로그를 위한 라이브러리<br/>
+  servlet /MVC패턴 중 controller 구현을 위한 라이브러리<br/>
+  junit   /서버 일부분의 테스트를 위한 라이블러리<br/>
+  springframework /동적인 웹사이트 구현을 위한 프레임워크 적용<br/>
+  Hikari  /DB커넥션을 위한 라이브러리<br/>
+  mybatis /매핑을 위한 라이브러리<br/>
+  jackson /json처리를 위한 라이브러리<br/>
+  spring-security /유저관련 기능 구현을 위한 라이브러리</span>
+<span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%)</strong></span>
+
 
 <p>
   기존 쇼핑몰을 개선하기위한 가상 의뢰 프로젝트이다. <br/>
-  전반적인 디자인 개선, 기능의 개선이 이루어졌다. 
+  전반적인 디자인 개선, 기능의 개선이 이루어졌다. <br/>
+  
 </p> 
 <br/>
 
