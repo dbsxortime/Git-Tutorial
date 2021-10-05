@@ -35,11 +35,18 @@
 <br/><br id="top"/>
 <h3>기능 변경사항 </h3> 
 <br/><br/>
-<a href="#user">go to user</a>
-<a href="#notice">go to notice</a>
+<span>기능 목차 (클릭시 이동합니다)</span><br/>
+<a href="#user">유저기능</a><br/>
+<a href="#product">상품기능</a><br/>
+<a href="#cart">장바구니</a><br/>
+<a href="#pay">구매기능</a><br/>
+<a href="#mypage">마이페이지</a><br/>
+<a href="#qna">Q&A기능</a><br/>
+<a href="#notice">공지기능</a><br/>
 
 
-<br id="#user"/>
+
+<br id="user"/>
 <h4>유저기능 관련</h4> 
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login">JSP</a>
@@ -52,6 +59,7 @@
 <a href="#top">위로 가기</a>
 <br/><br/>
 
+<br id="product"/>
 <h4>상품기능 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/product/product.jsp">JSP</a>
@@ -62,6 +70,7 @@
 <p>장바구니 수정 : 기존상품에 동일한 옵션 있을 시 수량 추가 선택 가능</p>
 <br/><br/>
 
+<br id="cart"/>
 <h4>카트기능 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/cart/cart.jsp">JSP</a>
@@ -74,6 +83,7 @@
 <p>장바구니 삭제기능 : 상품별 삭제 또는 장바구니 비우기 기능 추가.</p>
 <br/><br/>
 
+<br id="pay"/>
 <h4>구매기능 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/pay/pay.jsp">JSP</a>
@@ -89,6 +99,7 @@
 <p>옵션 : 구매상품 옵션 업데이트(수량)</p>
 <br/><br/>
 
+<br id="mypage"/>
 <h4>마이페이지 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/mypage/mypage.jsp">JSP</a>
@@ -99,6 +110,7 @@
 <p>주문 상세 조회 시 : 각각의 정보를 가지고 있는 '주문', '카트', '상품' 정보를 join하여 정보 가져오는 sql문 작성</p>
 <br/><br/>
 
+<br id="qna"/>
 <h4>Q&A 관련</h4>
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/QandA/list.jsp">JSP</a>
@@ -109,6 +121,7 @@
 <p>관리자 답변 : jquery ajax를 통한 비동기통신으로 답변달기 기능 구현</p>
 <p>마이페이지에서 사용자 본인이 쓴 게시물만 보기 구현</p>
 <br/><br/>
+
 <br id="#notice"/>
 <h4>공지 관련</h4>
 <hr/>링크 이동
