@@ -2,9 +2,9 @@
 <span>작업기간 : 2021.06 ~ 2021.07 [2명, 4주]</span> <br/>
 
 <p>기술 사용 스택</p>
-<span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span>
-<span>eclipse, VSCODE, GitHub</span>
-<span>사용 라이브러리 :</span>
+<span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span><br/>
+<span>eclipse, VSCODE, GitHub</span><br/><br/>
+<span>사용 라이브러리 :</span><br/>
 <span>
   log4j   /로그를 위한 라이브러리<br/>
   servlet /MVC패턴 중 controller 구현을 위한 라이브러리<br/>
@@ -13,7 +13,8 @@
   Hikari  /DB커넥션을 위한 라이브러리<br/>
   mybatis /매핑을 위한 라이브러리<br/>
   jackson /json처리를 위한 라이브러리<br/>
-  spring-security /유저관련 기능 구현을 위한 라이브러리</span>
+  spring-security /유저관련 기능 구현을 위한 라이브러리
+</span><br/>
 <span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%)</strong></span>
 
 
