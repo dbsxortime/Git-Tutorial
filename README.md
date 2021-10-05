@@ -22,7 +22,7 @@
 <a href="https://github.com/dbsxortime/my-project/tree/main/Project/src/main/webapp/WEB-INF/views/login">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/UserController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/UserMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>정규식을 통한 입력정보 조건 부여</p>
 <p>jquery ajax를 통한 비동기처리를 통한 회원정보 중복유무 확인</p>
 <p>모든 사용자, 로그인이용자(회원), 관리자 권한설정을 통한 사용자 이용권한 제한 </p>
@@ -33,7 +33,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/product/product.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/ProductController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/ProductMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>장바구니에 추가 : 수량, 옵션 선택 시 장바구니 추가 버튼 활성화</p>
 <p>장바구니 수정 : 기존상품에 동일한 옵션 있을 시 수량 추가 선택 가능</p>
 <br/><br/>
@@ -43,7 +43,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/cart/cart.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/CartController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/CartMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>선택 상품 총 구매금액으로 배송비 자동 계산 (현재 5만원 이상 배송비 무료, 메소드 수정을 통해 사이트 내 모든 수치 일괄수정 가능)</p>
 <p>옵션수정 : 기존 추가된 카트에서 수량, 옵션 수정 기능 추가</p>
 <p>선택 구매기능 : 목록에서 선택한 상품만 서버로 전달, 해당 상품만 구매기능 추가</p>
@@ -55,7 +55,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/pay/pay.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/PayController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/PayMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>선택 상품만 구매 : 장바구니에서 선택한 상품만 서버로 전달받아 해당 상품만 구매기능 추가</p>
 <p>할인 기능 구현 : 보유 쿠폰, 적립금 조회를 통해 가격 할인 적용</p>
 <p>구매 동작 시 '유저', '카트', '주문', '옵션' 데이터 업데이트</p>
@@ -70,7 +70,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/mypage/mypage.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/MyPageController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/MyPageMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>주문 상세 조회 : 주문조회 시 결제정보 조회 가능</p>
 <p>주문 상세 조회 시 : 각각의 정보를 가지고 있는 '주문', '카트', '상품' 정보를 join하여 정보 가져오는 sql문 작성</p>
 <br/><br/>
@@ -80,7 +80,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/QandA/list.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/QandAController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/QandAMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>게시물 작성 시 : 비밀글 설정을 통해 작성자/관리자만 볼 수 있게 설정 가능</p>
 <p>관리자 답변 : jquery ajax를 통한 비동기통신으로 답변달기 기능 구현</p>
 <p>마이페이지에서 사용자 본인이 쓴 게시물만 보기 구현</p>
@@ -91,7 +91,7 @@
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/notice/list.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/NoticeController.java">Controller</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/NoticeMapper.xml">Mapper</a>
-<hr/><br/>
+<hr/>
 <p>단순 게시물 CRUD 구현</p>
 <p>create, update, delete는 관리자만 가능</p>
 <p>모든 사용자 read 가능</p>
