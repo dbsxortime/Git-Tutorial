@@ -1,9 +1,16 @@
 # my-project
 <span>작업기간 : 2021.06 ~ 2021.07 [2명, 4주]</span> <br/>
+<p>
+  기존 쇼핑몰을 개선하기위한 가상 의뢰 프로젝트이다. <br/>
+  전반적인 디자인 개선, 기능의 개선이 이루어졌다.
+</p> 
+<br/><br/>
 
 <p>기술 사용 스택</p>
 <span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span><br/>
-<span>eclipse, VSCODE, GitHub</span><br/><br/>
+<span>eclipse, VSCODE, GitHub</span>
+<br/><br/>
+
 <p>사용 라이브러리 :</p>
 <span>
   log4j   /로그를 위한 라이브러리<br/>
@@ -14,16 +21,11 @@
   mybatis /매핑을 위한 라이브러리<br/>
   jackson /json처리를 위한 라이브러리<br/>
   spring-security /유저관련 기능 구현을 위한 라이브러리
-</span><br/>
+</span>
+<br/><br/>
 <span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%)</strong></span>
+<br/><br/>
 
-
-<p>
-  기존 쇼핑몰을 개선하기위한 가상 의뢰 프로젝트이다. <br/>
-  전반적인 디자인 개선, 기능의 개선이 이루어졌다. <br/>
-  
-</p> 
-<br/>
 
 # 개선 사항 및 기능 구현 사항 : 
 <h3>디자인 변경사항 </h3> <br/>
