@@ -4,7 +4,7 @@
 <p>기술 사용 스택</p>
 <span>JSP javascript jquery CSS JSP html Spring Java MyBatis OracleDB</span><br/>
 <span>eclipse, VSCODE, GitHub</span><br/><br/>
-<span>사용 라이브러리 :</span><br/>
+<p>사용 라이브러리 :</p>
 <span>
   log4j   /로그를 위한 라이브러리<br/>
   servlet /MVC패턴 중 controller 구현을 위한 라이브러리<br/>
