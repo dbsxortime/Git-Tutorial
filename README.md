@@ -24,7 +24,13 @@
   spring-security /유저관련 기능 구현을 위한 라이브러리
 </span>
 <br/><br/>
-<span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%)</strong></span>
+<span><strong>파트 : 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(100%), DB설계 수정(100%), 프로젝트 문서(100%, 하단 링크)</strong></span>
+
+<hr/>
+<p>프로젝트 문서(링크연결)</p>
+<a href="https://github.com/dbsxortime/ROGO-shoppingmall/blob/main/%EA%B8%B0%ED%9A%8D_%EB%B0%9C%ED%91%9C/%EA%B8%B0%EB%8A%A5%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD.pdf">기능요구사항</a>
+<a href="https://github.com/dbsxortime/ROGO-shoppingmall/blob/main/%EA%B8%B0%ED%9A%8D_%EB%B0%9C%ED%91%9C/ppt.pdf">발표ppt</a>
+<hr/>
 <br/><br/>
 
 
