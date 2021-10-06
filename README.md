@@ -24,7 +24,7 @@
   spring-security   /유저관련 기능 구현을 위한 라이브러리
 </span>
 <br/><br/>
-<span>파트<br/> <strong> 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(80%), DB설계 수정(100%), 프로젝트 문서(100%, 하단 링크)</strong></span>
+<span>파트 및 기여도<br/> <strong> 화면구현(JSP 33% / javascript 80%), 서버구현(80%), SQL문 작성(80%), DB설계 수정(100%), 프로젝트 문서(100%, 하단 링크)</strong></span>
 
 <hr/>
 <p>프로젝트 문서(링크연결)</p>
