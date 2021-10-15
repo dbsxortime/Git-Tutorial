@@ -18,7 +18,7 @@
   lombok    /vo의 객체, getter, setter를 위한 라이브러리<br/>
   junit     /서버 일부분의 테스트를 위한 라이블러리<br/>
   springframework   /동적인 웹사이트 구현을 위한 프레임워크 적용<br/>
-  Hikari    /DB커넥션을 위한 라이브러리<br/>
+  HikariCP    /Hikari를 통한 Connection pool <br/>
   mybatis   /매핑을 위한 라이브러리<br/>
   jackson   /json처리를 위한 라이브러리<br/>
   spring-security   /유저관련 기능 구현을 위한 라이브러리
