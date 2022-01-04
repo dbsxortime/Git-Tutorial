@@ -100,7 +100,7 @@
 <hr/>링크 이동
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/webapp/WEB-INF/views/shoppingmall/pay/pay.jsp">JSP</a>
 <a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/java/org/project/controller/PayController.java">Controller</a>
-<a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/PayMapper.xml">Mapper</a>
+<a href="https://github.com/dbsxortime/my-project/blob/main/Project/src/main/resources/org/project/mapper/OrderMapper.xml">Mapper</a>
 <hr/>
 <p>선택 상품만 구매 : 장바구니에서 선택한 상품만 서버로 전달받아 해당 상품만 구매기능 추가</p>
 <p>할인 기능 구현 : 보유 쿠폰, 적립금 조회를 통해 가격 할인 적용</p>
